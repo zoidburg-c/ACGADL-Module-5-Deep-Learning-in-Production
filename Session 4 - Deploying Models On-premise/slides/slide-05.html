@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 30pt 45pt 0 45pt;
+  }
+  .title-area h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .underline {
+    position: absolute;
+    top: 62pt; left: 45pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .columns {
+    display: flex;
+    gap: 16pt;
+    padding: 40pt 45pt 0 45pt;
+  }
+  .col {
+    flex: 1;
+    background-color: #1B75BC;
+    border-radius: 6pt;
+    padding: 18pt 16pt;
+  }
+  .col-mid {
+    background-color: #114060;
+  }
+  .col h3 {
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    margin-bottom: 10pt;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .col ul {
+    padding-left: 16pt;
+  }
+  .col li {
+    font-size: 11pt;
+    color: #FFFFFF;
+    line-height: 1.5;
+    margin-bottom: 4pt;
+  }
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Model Serving Frameworks</h1>
+  </div>
+  <div class="underline"></div>
+  <div class="columns">
+    <div class="col">
+      <h3>Nvidia Triton</h3>
+      <ul>
+        <li>High-performance</li>
+        <li>Multi-framework support</li>
+        <li>Production-grade</li>
+        <li>Dynamic batching</li>
+      </ul>
+    </div>
+    <div class="col col-mid">
+      <h3>TorchServe</h3>
+      <ul>
+        <li>PyTorch-native</li>
+        <li>Easy to get started</li>
+        <li>Model versioning</li>
+        <li>REST and gRPC APIs</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>vLLM</h3>
+      <ul>
+        <li>Optimised for LLMs</li>
+        <li>PagedAttention</li>
+        <li>Continuous batching</li>
+        <li>OpenAI-compatible API</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-line"></div>
+</body>
+</html>

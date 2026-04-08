@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 30pt 45pt 0 45pt;
+  }
+  .title-area h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .underline {
+    position: absolute;
+    top: 62pt; left: 45pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .exercises {
+    padding: 36pt 45pt 0 45pt;
+    display: flex;
+    flex-direction: column;
+    gap: 10pt;
+  }
+  .exercise {
+    display: flex;
+    gap: 12pt;
+    align-items: center;
+  }
+  .exercise-num {
+    width: 30pt;
+    height: 30pt;
+    background-color: #1B75BC;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .exercise-num-alt {
+    background-color: #114060;
+  }
+  .exercise-num-accent {
+    background-color: #F48200;
+  }
+  .exercise-num p {
+    font-size: 13pt;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  .exercise-text {
+    flex: 1;
+    background-color: #F2F3F4;
+    border-radius: 4pt;
+    padding: 10pt 16pt;
+  }
+  .exercise-text p {
+    font-size: 13pt;
+    color: #114060;
+    line-height: 1.3;
+  }
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Today's Hands-On Exercises</h1>
+  </div>
+  <div class="underline"></div>
+  <div class="exercises">
+    <div class="exercise">
+      <div class="exercise-num"><p>1</p></div>
+      <div class="exercise-text"><p>Package a model for SageMaker (model.tar.gz)</p></div>
+    </div>
+    <div class="exercise">
+      <div class="exercise-num exercise-num-alt"><p>2</p></div>
+      <div class="exercise-text"><p>Write a Dockerfile for ML inference</p></div>
+    </div>
+    <div class="exercise">
+      <div class="exercise-num"><p>3</p></div>
+      <div class="exercise-text"><p>Deploy to a SageMaker endpoint</p></div>
+    </div>
+    <div class="exercise">
+      <div class="exercise-num exercise-num-alt"><p>4</p></div>
+      <div class="exercise-text"><p>Test with inference requests</p></div>
+    </div>
+    <div class="exercise">
+      <div class="exercise-num exercise-num-accent"><p>5</p></div>
+      <div class="exercise-text"><p>Monitor with CloudWatch</p></div>
+    </div>
+    <div class="exercise">
+      <div class="exercise-num exercise-num-accent"><p>6</p></div>
+      <div class="exercise-text"><p>Clean up resources</p></div>
+    </div>
+  </div>
+  <div class="footer-line"></div>
+</body>
+</html>

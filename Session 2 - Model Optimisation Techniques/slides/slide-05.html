@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    margin: 30pt 40pt 0 40pt;
+    line-height: 1.3;
+  }
+  .accent-line {
+    position: absolute;
+    top: 62pt; left: 40pt;
+    width: 60pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .columns {
+    position: absolute;
+    top: 85pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    gap: 16pt;
+  }
+  .col {
+    width: 203pt;
+    height: 270pt;
+    background-color: #F7F9F9;
+    border-radius: 8pt;
+    padding: 18pt;
+    border-top: 4pt solid #F48200;
+  }
+  .col-num {
+    width: 32pt;
+    height: 32pt;
+    background-color: #1B75BC;
+    border-radius: 16pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10pt;
+  }
+  .col-num p {
+    font-size: 14pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+  }
+  .col h3 {
+    font-size: 14pt;
+    color: #114060;
+    font-weight: bold;
+    margin-bottom: 10pt;
+    line-height: 1.3;
+  }
+  .col p.desc {
+    font-size: 11pt;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 12pt;
+  }
+  .tag {
+    display: inline-block;
+    padding: 4pt 10pt;
+    border-radius: 10pt;
+    margin-top: 4pt;
+  }
+  .tag-easy { background-color: #E8F6F3; }
+  .tag-medium { background-color: #FFF3E0; }
+  .tag-best { background-color: #E8F6F3; }
+  .tag p {
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .tag-easy p { color: #1B75BC; }
+  .tag-medium p { color: #F48200; }
+  .tag-best p { color: #1B75BC; }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="header-bar"></div>
+  <h1>Types of Quantisation</h1>
+  <div class="accent-line"></div>
+  <div class="columns">
+    <div class="col">
+      <div class="col-num"><p>1</p></div>
+      <h3>Dynamic Quantisation</h3>
+      <p class="desc">Weights are quantised ahead of time. Activations are quantised dynamically at inference time. No calibration data needed.</p>
+      <div class="tag tag-easy"><p>Easiest to apply</p></div>
+    </div>
+    <div class="col">
+      <div class="col-num"><p>2</p></div>
+      <h3>Static Quantisation</h3>
+      <p class="desc">Both weights and activations are pre-quantised. Requires a representative calibration dataset to determine optimal scale factors.</p>
+      <div class="tag tag-medium"><p>Better accuracy</p></div>
+    </div>
+    <div class="col">
+      <div class="col-num"><p>3</p></div>
+      <h3>Quantisation-Aware Training</h3>
+      <p class="desc">Quantisation effects are simulated during training. The model learns to compensate for reduced precision, yielding best results.</p>
+      <div class="tag tag-best"><p>Best accuracy</p></div>
+    </div>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

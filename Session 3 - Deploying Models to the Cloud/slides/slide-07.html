@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 30pt 45pt 0 45pt;
+  }
+  .title-area h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .underline {
+    position: absolute;
+    top: 62pt; left: 45pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .content-area {
+    padding: 36pt 45pt 0 45pt;
+  }
+  .content-area h2 {
+    font-size: 15pt;
+    color: #114060;
+    font-weight: bold;
+    margin-bottom: 14pt;
+    line-height: 1.3;
+  }
+  .features {
+    display: flex;
+    gap: 14pt;
+    margin-bottom: 24pt;
+  }
+  .feature {
+    background-color: #E8F6F3;
+    border-radius: 4pt;
+    padding: 10pt 16pt;
+    flex: 1;
+    text-align: center;
+  }
+  .feature p {
+    font-size: 13pt;
+    color: #1B75BC;
+    font-weight: bold;
+  }
+  .section-label {
+    font-size: 15pt;
+    color: #114060;
+    font-weight: bold;
+    margin-bottom: 14pt;
+    line-height: 1.3;
+  }
+  .types {
+    display: flex;
+    gap: 14pt;
+  }
+  .type-card {
+    flex: 1;
+    background-color: #1B75BC;
+    border-radius: 6pt;
+    padding: 16pt;
+    text-align: center;
+  }
+  .type-card-alt {
+    background-color: #114060;
+  }
+  .type-card-accent {
+    background-color: #F48200;
+  }
+  .type-card p {
+    font-size: 14pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .type-card h6 {
+    font-size: 11pt;
+    color: #FFFFFF;
+    font-weight: normal;
+    margin-top: 6pt;
+    line-height: 1.3;
+  }
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Amazon SageMaker</h1>
+  </div>
+  <div class="underline"></div>
+  <div class="content-area">
+    <h2>What SageMaker Provides</h2>
+    <div class="features">
+      <div class="feature"><p>Notebooks</p></div>
+      <div class="feature"><p>Training</p></div>
+      <div class="feature"><p>Hosting</p></div>
+      <div class="feature"><p>Monitoring</p></div>
+    </div>
+    <h2>Inference Options</h2>
+    <div class="types">
+      <div class="type-card">
+        <p>Real-time</p>
+        <h6>Low-latency predictions via endpoints</h6>
+      </div>
+      <div class="type-card type-card-alt">
+        <p>Batch</p>
+        <h6>Process large datasets offline</h6>
+      </div>
+      <div class="type-card type-card-accent">
+        <p>Serverless</p>
+        <h6>Auto-scaling, pay per inference</h6>
+      </div>
+    </div>
+  </div>
+  <div class="footer-line"></div>
+</body>
+</html>

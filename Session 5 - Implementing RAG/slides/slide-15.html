@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #114060;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #F48200;
+  }
+  .title-area {
+    padding: 28pt 40pt 0 40pt;
+  }
+  .title-area h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .separator {
+    position: absolute;
+    top: 68pt; left: 40pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .takeaways {
+    position: absolute;
+    top: 85pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    flex-direction: column;
+    gap: 10pt;
+  }
+  .takeaway-item {
+    display: flex;
+    align-items: center;
+    gap: 14pt;
+  }
+  .check-box {
+    width: 28pt;
+    height: 28pt;
+    border-radius: 4pt;
+    background-color: #1B75BC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .check-box p {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .takeaway-text {
+    flex-grow: 1;
+    padding: 12pt 16pt;
+    border-radius: 4pt;
+    background-color: rgba(255,255,255,0.08);
+  }
+  .takeaway-text p {
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    color: #FFFFFF;
+    line-height: 1.4;
+  }
+  .next-box {
+    position: absolute;
+    bottom: 30pt; left: 40pt;
+    width: 640pt;
+    padding: 16pt 24pt;
+    border-radius: 6pt;
+    background-color: #1B75BC;
+  }
+  .next-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 4pt;
+  }
+  .next-box p {
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    color: #FFFFFF;
+    line-height: 1.4;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #F48200;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Key Takeaways</h1>
+  </div>
+  <div class="separator"></div>
+  <div class="takeaways">
+    <div class="takeaway-item">
+      <div class="check-box"><p>&#10003;</p></div>
+      <div class="takeaway-text"><p>RAG lets LLMs answer questions using your own documents</p></div>
+    </div>
+    <div class="takeaway-item">
+      <div class="check-box"><p>&#10003;</p></div>
+      <div class="takeaway-text"><p>Embeddings capture semantic meaning of text as numerical vectors</p></div>
+    </div>
+    <div class="takeaway-item">
+      <div class="check-box"><p>&#10003;</p></div>
+      <div class="takeaway-text"><p>Vector databases enable fast similarity search across large document collections</p></div>
+    </div>
+    <div class="takeaway-item">
+      <div class="check-box"><p>&#10003;</p></div>
+      <div class="takeaway-text"><p>LangChain is the go-to framework for building RAG systems</p></div>
+    </div>
+  </div>
+  <div class="next-box">
+    <h3>Next Session</h3>
+    <p>Session 6: Assessment - Putting it all together</p>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

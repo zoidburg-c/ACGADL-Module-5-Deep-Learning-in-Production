@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 28pt 40pt 0 40pt;
+  }
+  .title-area h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .separator {
+    position: absolute;
+    top: 68pt; left: 40pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .subtitle {
+    position: absolute;
+    top: 80pt; left: 40pt;
+    width: 640pt;
+  }
+  .subtitle p {
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    color: #114060;
+    line-height: 1.4;
+  }
+  .pipeline-area {
+    position: absolute;
+    top: 115pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .comp-box {
+    width: 80pt;
+    height: 50pt;
+    border-radius: 6pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6pt;
+  }
+  .comp-box p {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .c1 { background-color: #1B75BC; }
+  .c2 { background-color: #33B6FF; }
+  .c3 { background-color: #114060; }
+  .c4 { background-color: #1B75BC; }
+  .c5 { background-color: #33B6FF; }
+  .c6 { background-color: #114060; }
+  .c7 { background-color: #F48200; }
+  .pipe-arrow {
+    width: 16pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pipe-arrow p {
+    font-family: Arial, sans-serif;
+    font-size: 16pt;
+    color: #F48200;
+    font-weight: bold;
+  }
+  .details-area {
+    position: absolute;
+    top: 195pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10pt;
+  }
+  .detail-card {
+    width: 152pt;
+    padding: 12pt;
+    border-radius: 6pt;
+    background-color: #f7f7f7;
+  }
+  .detail-card h4 {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 4pt;
+  }
+  .detail-card p {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #114060;
+    line-height: 1.4;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>LangChain: Building LLM Applications</h1>
+  </div>
+  <div class="separator"></div>
+  <div class="subtitle">
+    <p>A framework that chains together components for building LLM-powered applications</p>
+  </div>
+  <div class="pipeline-area">
+    <div class="comp-box c1"><p>Document Loaders</p></div>
+    <div class="pipe-arrow"><p>&rarr;</p></div>
+    <div class="comp-box c2"><p>Text Splitters</p></div>
+    <div class="pipe-arrow"><p>&rarr;</p></div>
+    <div class="comp-box c3"><p>Embeddings</p></div>
+    <div class="pipe-arrow"><p>&rarr;</p></div>
+    <div class="comp-box c4"><p>Vector Stores</p></div>
+    <div class="pipe-arrow"><p>&rarr;</p></div>
+    <div class="comp-box c5"><p>Retrievers</p></div>
+    <div class="pipe-arrow"><p>&rarr;</p></div>
+    <div class="comp-box c6"><p>Chains</p></div>
+    <div class="pipe-arrow"><p>&rarr;</p></div>
+    <div class="comp-box c7"><p>LLM</p></div>
+  </div>
+  <div class="details-area">
+    <div class="detail-card">
+      <h4>Document Loaders</h4>
+      <p>Load data from PDFs, text files, web pages, databases</p>
+    </div>
+    <div class="detail-card">
+      <h4>Text Splitters</h4>
+      <p>Break documents into chunks with configurable size and overlap</p>
+    </div>
+    <div class="detail-card">
+      <h4>Embeddings</h4>
+      <p>Convert text chunks into vector representations</p>
+    </div>
+    <div class="detail-card">
+      <h4>Vector Stores</h4>
+      <p>Store and query embeddings using FAISS, ChromaDB, etc.</p>
+    </div>
+    <div class="detail-card">
+      <h4>Retrievers</h4>
+      <p>Find relevant documents for a given query</p>
+    </div>
+    <div class="detail-card">
+      <h4>Chains</h4>
+      <p>Combine components into end-to-end workflows</p>
+    </div>
+    <div class="detail-card">
+      <h4>LLM</h4>
+      <p>Generate final answers using retrieved context</p>
+    </div>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 30pt 45pt 0 45pt;
+  }
+  .title-area h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .underline {
+    position: absolute;
+    top: 62pt; left: 45pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .columns {
+    display: flex;
+    gap: 24pt;
+    padding: 40pt 45pt 0 45pt;
+  }
+  .col {
+    flex: 1;
+  }
+  .col h2 {
+    font-size: 16pt;
+    color: #114060;
+    font-weight: bold;
+    margin-bottom: 14pt;
+    line-height: 1.3;
+  }
+  .analogy-box {
+    background-color: #1B75BC;
+    border-radius: 6pt;
+    padding: 18pt;
+    margin-bottom: 12pt;
+  }
+  .analogy-box p {
+    font-size: 13pt;
+    color: #FFFFFF;
+    line-height: 1.5;
+  }
+  .desc-text {
+    font-size: 12pt;
+    color: #114060;
+    line-height: 1.5;
+  }
+  .term-item {
+    background-color: #F2F3F4;
+    border-radius: 4pt;
+    padding: 10pt 14pt;
+    margin-bottom: 8pt;
+    display: flex;
+  }
+  .term-item p {
+    font-size: 12pt;
+    color: #114060;
+    line-height: 1.4;
+  }
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Containers and Docker</h1>
+  </div>
+  <div class="underline"></div>
+  <div class="columns">
+    <div class="col">
+      <h2>What is a Container?</h2>
+      <div class="analogy-box">
+        <p>Think of a shipping container: it packages everything needed to run your application, isolated from the host system. Same contents work on any ship (machine).</p>
+      </div>
+      <p class="desc-text">A lightweight, standalone, executable package that includes code, runtime, libraries, and settings.</p>
+    </div>
+    <div class="col">
+      <h2>Key Docker Terms</h2>
+      <div class="term-item">
+        <p><span style="font-weight:bold;color:#1B75BC;">Dockerfile</span> — Recipe to build an image</p>
+      </div>
+      <div class="term-item">
+        <p><span style="font-weight:bold;color:#1B75BC;">Image</span> — Snapshot of your environment</p>
+      </div>
+      <div class="term-item">
+        <p><span style="font-weight:bold;color:#1B75BC;">Container</span> — Running instance of an image</p>
+      </div>
+      <div class="term-item">
+        <p><span style="font-weight:bold;color:#1B75BC;">Registry</span> — Repository to store images</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-line"></div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    margin: 30pt 40pt 0 40pt;
+    line-height: 1.3;
+  }
+  .accent-line {
+    position: absolute;
+    top: 62pt; left: 40pt;
+    width: 60pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .what-box {
+    position: absolute;
+    top: 82pt; left: 40pt;
+    width: 640pt;
+  }
+  .what-box p {
+    font-size: 13pt;
+    color: #114060;
+    line-height: 1.5;
+  }
+  .visual-row {
+    position: absolute;
+    top: 140pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16pt;
+  }
+  .bit-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6pt;
+  }
+  .bit-block {
+    border-radius: 6pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bit-block p {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+  }
+  .fp32 {
+    width: 140pt;
+    height: 100pt;
+    background-color: #114060;
+  }
+  .fp32 p { font-size: 22pt; }
+  .fp16 {
+    width: 100pt;
+    height: 75pt;
+    background-color: #1B75BC;
+  }
+  .fp16 p { font-size: 18pt; }
+  .int8 {
+    width: 65pt;
+    height: 55pt;
+    background-color: #33B6FF;
+  }
+  .int8 p { font-size: 15pt; }
+  .bit-label {
+    font-size: 11pt;
+    color: #555555;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .arrow-text {
+    font-size: 24pt;
+    color: #F48200;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 18pt;
+  }
+  .result-box {
+    position: absolute;
+    top: 290pt; left: 40pt;
+    width: 640pt;
+    height: 65pt;
+    background-color: #E8F6F3;
+    border-radius: 6pt;
+    border-left: 4pt solid #1B75BC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12pt 20pt;
+  }
+  .result-box h3 {
+    font-size: 14pt;
+    color: #1B75BC;
+    font-weight: bold;
+    margin-bottom: 4pt;
+    line-height: 1.3;
+  }
+  .result-box p {
+    font-size: 12pt;
+    color: #114060;
+    line-height: 1.4;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="header-bar"></div>
+  <h1>Technique 1: Quantisation</h1>
+  <div class="accent-line"></div>
+  <div class="what-box">
+    <p><strong>What:</strong> Reducing the numerical precision of model weights and activations</p>
+  </div>
+  <div class="visual-row">
+    <div class="bit-box">
+      <div class="bit-block fp32"><p>FP32</p></div>
+      <p class="bit-label">32 bits</p>
+    </div>
+    <p class="arrow-text">&rarr;</p>
+    <div class="bit-box">
+      <div class="bit-block fp16"><p>FP16</p></div>
+      <p class="bit-label">16 bits</p>
+    </div>
+    <p class="arrow-text">&rarr;</p>
+    <div class="bit-box">
+      <div class="bit-block int8"><p>INT8</p></div>
+      <p class="bit-label">8 bits</p>
+    </div>
+  </div>
+  <div class="result-box">
+    <h3>Result</h3>
+    <p>2-4x smaller model size, faster inference on supported hardware, minimal accuracy loss</p>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

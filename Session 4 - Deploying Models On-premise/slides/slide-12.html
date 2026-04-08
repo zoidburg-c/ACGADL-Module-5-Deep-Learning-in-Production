@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 30pt 45pt 0 45pt;
+  }
+  .title-area h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .underline {
+    position: absolute;
+    top: 62pt; left: 45pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .takeaways {
+    padding: 36pt 45pt 0 55pt;
+  }
+  .takeaways li {
+    font-size: 13pt;
+    color: #114060;
+    line-height: 1.5;
+    margin-bottom: 10pt;
+  }
+  .next-box {
+    position: absolute;
+    bottom: 30pt;
+    left: 45pt;
+    right: 45pt;
+    background-color: #114060;
+    border-radius: 6pt;
+    padding: 14pt 20pt;
+  }
+  .next-box p {
+    font-size: 13pt;
+    color: #F48200;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Key Takeaways</h1>
+  </div>
+  <div class="underline"></div>
+  <ul class="takeaways">
+    <li>On-premise is essential for privacy, compliance, and low-latency use cases</li>
+    <li>Linux + Nvidia is the industry standard for production GPU inference</li>
+    <li>Apple Silicon + MLX is a viable alternative for local inference</li>
+    <li>Ollama makes running LLMs locally accessible to beginners</li>
+  </ul>
+  <div class="next-box">
+    <p>Next: Session 5 -- Implementing RAG</p>
+  </div>
+  <div class="footer-line"></div>
+</body>
+</html>

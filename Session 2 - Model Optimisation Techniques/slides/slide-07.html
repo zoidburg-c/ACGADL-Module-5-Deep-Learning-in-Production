@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    margin: 30pt 40pt 0 40pt;
+    line-height: 1.3;
+  }
+  .accent-line {
+    position: absolute;
+    top: 62pt; left: 40pt;
+    width: 60pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .what-box {
+    position: absolute;
+    top: 82pt; left: 40pt;
+    width: 640pt;
+  }
+  .what-box p {
+    font-size: 13pt;
+    color: #114060;
+    line-height: 1.5;
+  }
+  .distill-visual {
+    position: absolute;
+    top: 125pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20pt;
+  }
+  .model-box {
+    border-radius: 10pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16pt;
+  }
+  .teacher {
+    width: 180pt;
+    height: 140pt;
+    background-color: #114060;
+  }
+  .student {
+    width: 120pt;
+    height: 100pt;
+    background-color: #1B75BC;
+  }
+  .model-box h3 {
+    font-size: 15pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 6pt;
+    line-height: 1.3;
+    text-align: center;
+  }
+  .model-box p {
+    font-size: 10pt;
+    color: #CCCCCC;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .arrow-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4pt;
+  }
+  .arrow-col p {
+    font-size: 10pt;
+    color: #555555;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .arrow-big {
+    font-size: 28pt;
+    color: #F48200;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+  }
+  .example-box {
+    position: absolute;
+    top: 300pt; left: 40pt;
+    width: 640pt;
+    height: 66pt;
+    background-color: #FFF3E0;
+    border-radius: 6pt;
+    border-left: 4pt solid #F48200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10pt 20pt;
+  }
+  .example-box h4 {
+    font-size: 12pt;
+    color: #F48200;
+    font-weight: bold;
+    margin-bottom: 4pt;
+    line-height: 1.3;
+  }
+  .example-box p {
+    font-size: 11pt;
+    color: #114060;
+    line-height: 1.4;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="header-bar"></div>
+  <h1>Technique 3: Knowledge Distillation</h1>
+  <div class="accent-line"></div>
+  <div class="what-box">
+    <p><strong>What:</strong> Training a smaller "student" model to mimic a larger "teacher" model</p>
+  </div>
+  <div class="distill-visual">
+    <div class="model-box teacher">
+      <h3>Teacher Model</h3>
+      <p>Large, accurate</p>
+      <p>340M parameters</p>
+    </div>
+    <div class="arrow-col">
+      <p class="arrow-big">&rarr;</p>
+      <p>Knowledge</p>
+      <p>transfer</p>
+    </div>
+    <div class="model-box student">
+      <h3>Student Model</h3>
+      <p>Small, fast</p>
+      <p>66M parameters</p>
+    </div>
+  </div>
+  <div class="example-box">
+    <h4>Example: BERT to DistilBERT</h4>
+    <p>340M params &rarr; 66M params (5x smaller) | 97% accuracy retained | 60% faster inference</p>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

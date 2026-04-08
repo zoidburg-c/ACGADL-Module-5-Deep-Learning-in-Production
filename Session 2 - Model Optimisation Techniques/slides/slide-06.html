@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    margin: 30pt 40pt 0 40pt;
+    line-height: 1.3;
+  }
+  .accent-line {
+    position: absolute;
+    top: 62pt; left: 40pt;
+    width: 60pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .what-box {
+    position: absolute;
+    top: 82pt; left: 40pt;
+    width: 640pt;
+  }
+  .what-box p {
+    font-size: 13pt;
+    color: #114060;
+    line-height: 1.5;
+  }
+  .network-area {
+    position: absolute;
+    top: 120pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    gap: 30pt;
+    justify-content: center;
+  }
+  .nn-panel {
+    width: 290pt;
+    height: 170pt;
+    border-radius: 8pt;
+    padding: 14pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nn-before { background-color: #114060; }
+  .nn-after { background-color: #1B75BC; }
+  .nn-panel h3 {
+    font-size: 13pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 10pt;
+    line-height: 1.3;
+    text-align: center;
+  }
+  .nn-grid {
+    display: flex;
+    gap: 8pt;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8pt;
+  }
+  .node {
+    width: 18pt;
+    height: 18pt;
+    border-radius: 9pt;
+  }
+  .node-active { background-color: #F48200; }
+  .node-inactive { background-color: #33B6FF; }
+  .node-pruned { background-color: rgba(94, 168, 167, 0.2); }
+  .nn-panel p.nn-label {
+    font-size: 10pt;
+    color: #CCCCCC;
+    text-align: center;
+    margin-top: 6pt;
+    line-height: 1.3;
+  }
+  .types-row {
+    position: absolute;
+    top: 310pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    gap: 16pt;
+  }
+  .type-box {
+    width: 312pt;
+    height: 58pt;
+    background-color: #F7F9F9;
+    border-radius: 6pt;
+    border-left: 4pt solid #F48200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10pt 16pt;
+  }
+  .type-box h4 {
+    font-size: 12pt;
+    color: #1B75BC;
+    font-weight: bold;
+    margin-bottom: 3pt;
+    line-height: 1.3;
+  }
+  .type-box p {
+    font-size: 10pt;
+    color: #555555;
+    line-height: 1.4;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="header-bar"></div>
+  <h1>Technique 2: Pruning</h1>
+  <div class="accent-line"></div>
+  <div class="what-box">
+    <p><strong>What:</strong> Removing unnecessary (near-zero) weights from the neural network</p>
+  </div>
+  <div class="network-area">
+    <div class="nn-panel nn-before">
+      <h3>Before Pruning</h3>
+      <div class="nn-grid">
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+        <div class="node node-active"></div>
+        <div class="node node-inactive"></div>
+      </div>
+      <p class="nn-label">All connections active</p>
+    </div>
+    <div class="nn-panel nn-after">
+      <h3>After Pruning</h3>
+      <div class="nn-grid">
+        <div class="node node-active"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-active"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-active"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-active"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-active"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-active"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-active"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-pruned"></div>
+        <div class="node node-pruned"></div>
+      </div>
+      <p class="nn-label">Unnecessary weights removed</p>
+    </div>
+  </div>
+  <div class="types-row">
+    <div class="type-box">
+      <h4>Unstructured Pruning</h4>
+      <p>Removes individual weights (fine-grained, flexible)</p>
+    </div>
+    <div class="type-box">
+      <h4>Structured Pruning</h4>
+      <p>Removes entire neurons or filters (hardware-friendly)</p>
+    </div>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

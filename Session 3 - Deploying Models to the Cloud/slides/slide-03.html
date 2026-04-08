@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 30pt 45pt 0 45pt;
+  }
+  .title-area h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .underline {
+    position: absolute;
+    top: 62pt; left: 45pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .table-container {
+    padding: 40pt 45pt 0 45pt;
+  }
+  .row {
+    display: flex;
+    width: 630pt;
+  }
+  .header-cell {
+    width: 315pt;
+    height: 40pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-cloud {
+    background-color: #1B75BC;
+    border-radius: 6pt 0 0 0;
+  }
+  .header-onprem {
+    background-color: #114060;
+    border-radius: 0 6pt 0 0;
+  }
+  .header-cell p {
+    font-size: 15pt;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  .data-cell {
+    width: 315pt;
+    height: 48pt;
+    display: flex;
+    align-items: center;
+    padding: 0 20pt;
+  }
+  .cell-cloud {
+    background-color: #E8F6F3;
+  }
+  .cell-onprem {
+    background-color: #F2F3F4;
+  }
+  .cell-cloud-alt {
+    background-color: #D1EEEA;
+  }
+  .cell-onprem-alt {
+    background-color: #E5E7E9;
+  }
+  .data-cell p {
+    font-size: 13pt;
+    color: #114060;
+    line-height: 1.3;
+  }
+  .last-row .data-cell:first-child {
+    border-radius: 0 0 0 6pt;
+  }
+  .last-row .data-cell:last-child {
+    border-radius: 0 0 6pt 0;
+  }
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Cloud vs On-Premise</h1>
+  </div>
+  <div class="underline"></div>
+  <div class="table-container">
+    <div class="row">
+      <div class="header-cell header-cloud"><p>Cloud</p></div>
+      <div class="header-cell header-onprem"><p>On-Premise</p></div>
+    </div>
+    <div class="row">
+      <div class="data-cell cell-cloud"><p>Elastic scaling</p></div>
+      <div class="data-cell cell-onprem"><p>Fixed capacity</p></div>
+    </div>
+    <div class="row">
+      <div class="data-cell cell-cloud-alt"><p>Managed infrastructure</p></div>
+      <div class="data-cell cell-onprem-alt"><p>Full control</p></div>
+    </div>
+    <div class="row">
+      <div class="data-cell cell-cloud"><p>Pay-per-use pricing</p></div>
+      <div class="data-cell cell-onprem"><p>Predictable cost</p></div>
+    </div>
+    <div class="row last-row">
+      <div class="data-cell cell-cloud-alt"><p>Global availability</p></div>
+      <div class="data-cell cell-onprem-alt"><p>Data privacy</p></div>
+    </div>
+  </div>
+  <div class="footer-line"></div>
+</body>
+</html>

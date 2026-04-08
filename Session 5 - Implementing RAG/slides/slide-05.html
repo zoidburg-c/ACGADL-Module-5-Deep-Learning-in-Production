@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 28pt 40pt 0 40pt;
+  }
+  .title-area h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .separator {
+    position: absolute;
+    top: 68pt; left: 40pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .content-row {
+    position: absolute;
+    top: 85pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    gap: 20pt;
+  }
+  .left-col {
+    width: 350pt;
+  }
+  .what-box {
+    padding: 16pt 20pt;
+    border-radius: 6pt;
+    background-color: #1B75BC;
+    margin-bottom: 16pt;
+  }
+  .what-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6pt;
+  }
+  .what-box p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #FFFFFF;
+    line-height: 1.5;
+  }
+  .insight-box {
+    padding: 16pt 20pt;
+    border-radius: 6pt;
+    background-color: #114060;
+  }
+  .insight-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6pt;
+  }
+  .insight-box p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #FFFFFF;
+    line-height: 1.5;
+  }
+  .right-col {
+    width: 270pt;
+  }
+  .visual-box {
+    padding: 20pt;
+    border-radius: 6pt;
+    background-color: #f7f7f7;
+    height: 100%;
+  }
+  .visual-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    color: #114060;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 16pt;
+    text-align: center;
+  }
+  .vector-space {
+    position: relative;
+    width: 230pt;
+    height: 180pt;
+    border-radius: 6pt;
+    background-color: #FFFFFF;
+  }
+  .word-bubble {
+    position: absolute;
+    padding: 8pt 14pt;
+    border-radius: 20pt;
+  }
+  .word-bubble p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .dog { background-color: #1B75BC; top: 50pt; left: 30pt; }
+  .dog p { color: #FFFFFF; }
+  .puppy { background-color: #33B6FF; top: 80pt; left: 90pt; }
+  .puppy p { color: #FFFFFF; }
+  .car { background-color: #F48200; top: 30pt; left: 150pt; }
+  .car p { color: #FFFFFF; }
+  .close-label {
+    position: absolute;
+    top: 120pt; left: 40pt;
+  }
+  .close-label p {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .far-label {
+    position: absolute;
+    top: 10pt; left: 130pt;
+  }
+  .far-label p {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Embeddings: Turning Text into Numbers</h1>
+  </div>
+  <div class="separator"></div>
+  <div class="content-row">
+    <div class="left-col">
+      <div class="what-box">
+        <h3>What Are Embeddings?</h3>
+        <p>Converting text into numerical vectors (lists of numbers) that capture the semantic meaning of words and sentences.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Key Insight</h3>
+        <p>Similar texts produce similar vectors. "dog" and "puppy" are close in vector space, while "car" is far away. This enables semantic search.</p>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="visual-box">
+        <h3>Vector Space Visualisation</h3>
+        <div class="vector-space">
+          <div class="word-bubble dog"><p>dog</p></div>
+          <div class="word-bubble puppy"><p>puppy</p></div>
+          <div class="word-bubble car"><p>car</p></div>
+          <div class="close-label"><p>Close together</p></div>
+          <div class="far-label"><p>Far apart</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

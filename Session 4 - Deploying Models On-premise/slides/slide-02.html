@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 30pt 45pt 0 45pt;
+  }
+  .title-area h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .underline {
+    position: absolute;
+    top: 62pt; left: 45pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16pt;
+    padding: 40pt 45pt 0 45pt;
+    justify-content: center;
+  }
+  .box {
+    width: 300pt;
+    border-radius: 6pt;
+    padding: 18pt 20pt;
+  }
+  .box-teal {
+    background-color: #1B75BC;
+  }
+  .box-dark {
+    background-color: #114060;
+  }
+  .box h3 {
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    margin-bottom: 6pt;
+    line-height: 1.3;
+  }
+  .box p {
+    font-size: 12pt;
+    color: #FFFFFF;
+    line-height: 1.4;
+  }
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Why Deploy On-Premise?</h1>
+  </div>
+  <div class="underline"></div>
+  <div class="boxes">
+    <div class="box box-teal">
+      <h3>Data Privacy</h3>
+      <p>Sensitive data stays internal</p>
+    </div>
+    <div class="box box-dark">
+      <h3>Regulatory Compliance</h3>
+      <p>GDPR, HIPAA, financial regulations</p>
+    </div>
+    <div class="box box-dark">
+      <h3>Low Latency</h3>
+      <p>No network round-trip to cloud</p>
+    </div>
+    <div class="box box-teal">
+      <h3>Cost Control</h3>
+      <p>Predictable for high-volume inference</p>
+    </div>
+  </div>
+  <div class="footer-line"></div>
+</body>
+</html>

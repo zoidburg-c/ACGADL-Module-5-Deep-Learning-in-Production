@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 30pt 45pt 0 45pt;
+  }
+  .title-area h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .underline {
+    position: absolute;
+    top: 62pt; left: 45pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .table-container {
+    padding: 40pt 45pt 0 45pt;
+  }
+  .table-header {
+    display: flex;
+  }
+  .th {
+    padding: 10pt 12pt;
+    background-color: #1B75BC;
+  }
+  .th-scenario { width: 210pt; border-radius: 6pt 0 0 0; }
+  .th-target { width: 210pt; }
+  .th-approach { width: 210pt; border-radius: 0 6pt 0 0; }
+  .th p {
+    font-size: 12pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .table-row {
+    display: flex;
+  }
+  .td {
+    padding: 10pt 12pt;
+    border-bottom: 1pt solid #E0E0E0;
+  }
+  .td-scenario { width: 210pt; }
+  .td-target { width: 210pt; }
+  .td-approach { width: 210pt; }
+  .td p {
+    font-size: 11pt;
+    color: #114060;
+    line-height: 1.4;
+  }
+  .td-alt {
+    background-color: #f7f7f7;
+  }
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Choosing Your Deployment Target</h1>
+  </div>
+  <div class="underline"></div>
+  <div class="table-container">
+    <div class="table-header">
+      <div class="th th-scenario"><p>Scenario</p></div>
+      <div class="th th-target"><p>Target</p></div>
+      <div class="th th-approach"><p>Approach</p></div>
+    </div>
+    <div class="table-row">
+      <div class="td td-scenario td-alt"><p>Small models + variable load</p></div>
+      <div class="td td-target td-alt"><p>Cloud</p></div>
+      <div class="td td-approach td-alt"><p>SageMaker / Vertex AI</p></div>
+    </div>
+    <div class="table-row">
+      <div class="td td-scenario"><p>Large LLMs + privacy</p></div>
+      <div class="td td-target"><p>On-premise</p></div>
+      <div class="td td-approach"><p>GPU server + Triton</p></div>
+    </div>
+    <div class="table-row">
+      <div class="td td-scenario td-alt"><p>Development / testing</p></div>
+      <div class="td td-target td-alt"><p>Local Mac</p></div>
+      <div class="td td-approach td-alt"><p>MLX / Ollama</p></div>
+    </div>
+    <div class="table-row">
+      <div class="td td-scenario"><p>Multi-GPU inference</p></div>
+      <div class="td td-target"><p>Distributed</p></div>
+      <div class="td td-approach"><p>vLLM / TGI</p></div>
+    </div>
+  </div>
+  <div class="footer-line"></div>
+</body>
+</html>

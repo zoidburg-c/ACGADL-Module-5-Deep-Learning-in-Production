@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 28pt 40pt 0 40pt;
+  }
+  .title-area h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .separator {
+    position: absolute;
+    top: 68pt; left: 40pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .exercises {
+    position: absolute;
+    top: 90pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    flex-direction: column;
+    gap: 14pt;
+  }
+  .exercise-card {
+    display: flex;
+    align-items: stretch;
+    border-radius: 6pt;
+    overflow: hidden;
+  }
+  .exercise-label {
+    width: 80pt;
+    padding: 16pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1B75BC;
+  }
+  .exercise-label p {
+    font-family: Arial, sans-serif;
+    font-size: 16pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .exercise-body {
+    flex-grow: 1;
+    padding: 14pt 20pt;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .exercise-body h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #114060;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .exercise-body p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .exercise-card-accent .exercise-label {
+    background-color: #114060;
+  }
+  .exercise-card-accent .exercise-body {
+    background-color: #f7f7f7;
+  }
+  .total-box {
+    position: absolute;
+    bottom: 30pt; left: 40pt;
+    width: 640pt;
+    padding: 14pt 20pt;
+    border-radius: 6pt;
+    background-color: #114060;
+  }
+  .total-box p {
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Today's Hands-On Exercises</h1>
+  </div>
+  <div class="separator"></div>
+  <div class="exercises">
+    <div class="exercise-card">
+      <div class="exercise-label"><p>Part A</p></div>
+      <div class="exercise-body">
+        <h3>Embeddings and Vector Stores</h3>
+        <p>60 min</p>
+      </div>
+    </div>
+    <div class="exercise-card exercise-card-accent">
+      <div class="exercise-label"><p>Part B</p></div>
+      <div class="exercise-body">
+        <h3>LangChain Fundamentals</h3>
+        <p>60 min</p>
+      </div>
+    </div>
+    <div class="exercise-card">
+      <div class="exercise-label"><p>Part C</p></div>
+      <div class="exercise-body">
+        <h3>Building a Complete RAG System</h3>
+        <p>90 min</p>
+      </div>
+    </div>
+    <div class="exercise-card exercise-card-accent">
+      <div class="exercise-label"><p>Part D</p></div>
+      <div class="exercise-body">
+        <h3>LlamaIndex Quick Start</h3>
+        <p>30 min</p>
+      </div>
+    </div>
+  </div>
+  <div class="total-box">
+    <p>Total hands-on time: 4 hours  |  Lecture + Discussion: 2 hours</p>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

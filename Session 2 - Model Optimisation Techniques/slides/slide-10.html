@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #114060;
+    display: flex;
+    flex-direction: column;
+  }
+  .accent-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #F48200;
+  }
+  .left-strip {
+    position: absolute;
+    top: 0; left: 0;
+    width: 8pt; height: 405pt;
+    background-color: #1B75BC;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 30pt 40pt 0 40pt;
+    line-height: 1.3;
+  }
+  .accent-line {
+    position: absolute;
+    top: 62pt; left: 40pt;
+    width: 60pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .takeaways {
+    position: absolute;
+    top: 82pt; left: 40pt;
+    width: 640pt;
+  }
+  .takeaways ul {
+    padding-left: 22pt;
+  }
+  .takeaways ul li {
+    font-size: 13pt;
+    color: #D5D8DC;
+    line-height: 1.6;
+    margin-bottom: 12pt;
+  }
+  .next-box {
+    position: absolute;
+    bottom: 30pt; left: 40pt;
+    width: 640pt;
+    height: 44pt;
+    background-color: #1B75BC;
+    border-radius: 6pt;
+    display: flex;
+    align-items: center;
+    padding: 0 20pt;
+  }
+  .next-box p {
+    font-size: 12pt;
+    color: #FFFFFF;
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+  <div class="accent-bar"></div>
+  <div class="left-strip"></div>
+  <h1>Key Takeaways</h1>
+  <div class="accent-line"></div>
+  <div class="takeaways">
+    <ul>
+      <li><strong>Quantisation</strong> is the easiest win &#8212; often 2-4x improvement with minimal accuracy loss</li>
+      <li><strong>Pruning</strong> removes unnecessary weights &#8212; good for already-trained models</li>
+      <li><strong>Distillation</strong> creates purpose-built smaller models &#8212; best for new deployments</li>
+      <li>These techniques can be <strong>combined</strong> for even greater gains</li>
+      <li><strong>Next:</strong> Session 3 &#8212; Deploying to AWS Cloud</li>
+    </ul>
+  </div>
+  <div class="next-box">
+    <p><strong>Up Next:</strong> Session 3 &#8212; Deploying Models to AWS Cloud</p>
+  </div>
+</body>
+</html>

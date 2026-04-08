@@ -1,0 +1,69 @@
+# =============================================================================
+# Module 5: Deep Learning in Production — Python Dependencies
+# =============================================================================
+# Install all dependencies:
+#   pip install -r requirements.txt
+#
+# Note: mlx and mlx-lm are NOT included here because they only work on
+# Apple Silicon Macs (M1/M2/M3/M4). If you are on Apple Silicon and want
+# to run the MLX exercises in Session 4, install them separately:
+#   pip install mlx mlx-lm
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Session 1: Introduction to Production Pipelines
+# -----------------------------------------------------------------------------
+torch>=2.0.0
+torchvision>=0.15.0
+fastapi>=0.100.0
+uvicorn>=0.23.0
+Pillow>=9.0.0
+requests>=2.28.0
+
+# -----------------------------------------------------------------------------
+# Session 2: Model Optimisation Techniques
+# -----------------------------------------------------------------------------
+# torch, torchvision (already listed above)
+tabulate>=0.9.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# -----------------------------------------------------------------------------
+# Session 3: Deploying Models to the Cloud
+# -----------------------------------------------------------------------------
+boto3>=1.28.0
+sagemaker>=2.170.0
+flask>=2.3.0
+# Docker CLI is also needed — install Docker Desktop separately
+# (not a Python package; see https://docs.docker.com/get-docker/)
+
+# -----------------------------------------------------------------------------
+# Session 4: Deploying Models On-Premise
+# -----------------------------------------------------------------------------
+# requests, fastapi, uvicorn (already listed above)
+psutil>=5.9.0
+aiohttp>=3.8.0
+pydantic>=2.0.0
+# Ollama must be installed separately — see setup/ollama-setup-guide.md
+# mlx, mlx-lm — Apple Silicon ONLY, install separately:
+#   pip install mlx mlx-lm
+
+# -----------------------------------------------------------------------------
+# Session 5: Implementing RAG
+# -----------------------------------------------------------------------------
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-aws>=0.1.0
+chromadb>=0.4.0
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.0
+pypdf>=3.15.0
+llama-index>=0.10.0
+llama-index-llms-ollama>=0.1.0
+llama-index-embeddings-huggingface>=0.1.0
+scikit-learn>=1.3.0
+
+# -----------------------------------------------------------------------------
+# Common / Shared
+# -----------------------------------------------------------------------------
+# numpy, matplotlib, requests, Pillow (already listed above)

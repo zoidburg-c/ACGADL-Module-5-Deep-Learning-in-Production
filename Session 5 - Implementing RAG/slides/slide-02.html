@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 28pt 40pt 0 40pt;
+  }
+  .title-area h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .separator {
+    position: absolute;
+    top: 68pt; left: 40pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .boxes {
+    display: flex;
+    position: absolute;
+    top: 90pt; left: 40pt;
+    width: 640pt;
+    gap: 20pt;
+  }
+  .problem-box {
+    width: 200pt;
+    padding: 20pt;
+    border-radius: 6pt;
+    background-color: #114060;
+  }
+  .problem-num {
+    font-family: Arial, sans-serif;
+    font-size: 36pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 6pt;
+  }
+  .problem-title {
+    font-family: Arial, sans-serif;
+    font-size: 15pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 10pt;
+  }
+  .problem-desc {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #33B6FF;
+    line-height: 1.5;
+  }
+  .bottom-note {
+    position: absolute;
+    bottom: 30pt; left: 40pt;
+    width: 640pt;
+    padding: 14pt 20pt;
+    border-radius: 6pt;
+    background-color: #1B75BC;
+  }
+  .bottom-note p {
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    color: #FFFFFF;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Why LLMs Need Help</h1>
+  </div>
+  <div class="separator"></div>
+  <div class="boxes">
+    <div class="problem-box">
+      <p class="problem-num">1</p>
+      <p class="problem-title">Hallucination</p>
+      <p class="problem-desc">Makes up facts confidently, presenting fiction as truth</p>
+    </div>
+    <div class="problem-box">
+      <p class="problem-num">2</p>
+      <p class="problem-title">Outdated Knowledge</p>
+      <p class="problem-desc">Training data has a cutoff date; no recent information</p>
+    </div>
+    <div class="problem-box">
+      <p class="problem-num">3</p>
+      <p class="problem-title">No Private Data</p>
+      <p class="problem-desc">Cannot access your company's internal documents</p>
+    </div>
+  </div>
+  <div class="bottom-note">
+    <p>These limitations make LLMs unreliable for enterprise use cases without augmentation</p>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

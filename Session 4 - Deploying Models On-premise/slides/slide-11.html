@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 30pt 45pt 0 45pt;
+  }
+  .title-area h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .underline {
+    position: absolute;
+    top: 62pt; left: 45pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .exercises {
+    display: flex;
+    flex-direction: column;
+    gap: 16pt;
+    padding: 45pt 45pt 0 45pt;
+  }
+  .exercise {
+    display: flex;
+    gap: 16pt;
+    align-items: center;
+  }
+  .exercise-badge {
+    width: 70pt;
+    height: 50pt;
+    background-color: #F48200;
+    border-radius: 6pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .exercise-badge p {
+    font-size: 14pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .exercise-content {
+    flex: 1;
+    background-color: #f7f7f7;
+    border-radius: 6pt;
+    padding: 14pt 18pt;
+    border-left: 4pt solid #1B75BC;
+  }
+  .exercise-content h3 {
+    font-size: 14pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .exercise-content p {
+    font-size: 12pt;
+    color: #114060;
+    margin-top: 3pt;
+    line-height: 1.3;
+  }
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Today's Hands-On Exercises</h1>
+  </div>
+  <div class="underline"></div>
+  <div class="exercises">
+    <div class="exercise">
+      <div class="exercise-badge"><p>Part A</p></div>
+      <div class="exercise-content">
+        <h3>Running LLMs with Ollama</h3>
+        <p>Install, pull, and interact with open-source models locally</p>
+      </div>
+    </div>
+    <div class="exercise">
+      <div class="exercise-badge"><p>Part B</p></div>
+      <div class="exercise-content">
+        <h3>Apple MLX Framework</h3>
+        <p>Run inference on Apple Silicon using the MLX library</p>
+      </div>
+    </div>
+    <div class="exercise">
+      <div class="exercise-badge"><p>Part C</p></div>
+      <div class="exercise-content">
+        <h3>Building a Local Inference Server</h3>
+        <p>Create a REST API serving predictions from a local model</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-line"></div>
+</body>
+</html>

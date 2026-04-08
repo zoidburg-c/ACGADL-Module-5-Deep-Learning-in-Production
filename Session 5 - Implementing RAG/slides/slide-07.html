@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 28pt 40pt 0 40pt;
+  }
+  .title-area h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .separator {
+    position: absolute;
+    top: 68pt; left: 40pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .content-area {
+    position: absolute;
+    top: 85pt; left: 40pt;
+    width: 640pt;
+  }
+  .desc-row {
+    display: flex;
+    gap: 20pt;
+    margin-bottom: 16pt;
+  }
+  .what-box {
+    width: 310pt;
+    padding: 16pt 20pt;
+    border-radius: 6pt;
+    background-color: #1B75BC;
+  }
+  .what-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6pt;
+  }
+  .what-box p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #FFFFFF;
+    line-height: 1.5;
+  }
+  .how-box {
+    width: 310pt;
+    padding: 16pt 20pt;
+    border-radius: 6pt;
+    background-color: #114060;
+  }
+  .how-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6pt;
+  }
+  .how-box p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #FFFFFF;
+    line-height: 1.5;
+  }
+  .options-label {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #114060;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 12pt;
+  }
+  .options-row {
+    display: flex;
+    gap: 16pt;
+  }
+  .option-card {
+    width: 202pt;
+    padding: 16pt;
+    border-radius: 6pt;
+    background-color: #f7f7f7;
+  }
+  .option-card h4 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 4pt;
+  }
+  .option-card p {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #114060;
+    line-height: 1.4;
+  }
+  .tag {
+    display: inline-block;
+    padding: 3pt 8pt;
+    border-radius: 3pt;
+    background-color: #1B75BC;
+    margin-top: 8pt;
+  }
+  .tag p {
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+    color: #FFFFFF;
+    line-height: 1.2;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>Vector Databases</h1>
+  </div>
+  <div class="separator"></div>
+  <div class="content-area">
+    <div class="desc-row">
+      <div class="what-box">
+        <h3>What</h3>
+        <p>Databases optimised for storing and searching high-dimensional vectors using similarity metrics.</p>
+      </div>
+      <div class="how-box">
+        <h3>How</h3>
+        <p>Store embeddings alongside metadata, then find nearest neighbours using cosine similarity or L2 distance.</p>
+      </div>
+    </div>
+    <p class="options-label">Popular Options</p>
+    <div class="options-row">
+      <div class="option-card">
+        <h4>FAISS</h4>
+        <p>Facebook AI Similarity Search. Highly optimised, runs locally.</p>
+        <div class="tag"><p>Local, Free</p></div>
+      </div>
+      <div class="option-card">
+        <h4>ChromaDB</h4>
+        <p>Developer-friendly vector store. Easy setup, great for prototyping.</p>
+        <div class="tag"><p>Local, Easy</p></div>
+      </div>
+      <div class="option-card">
+        <h4>Pinecone</h4>
+        <p>Fully managed cloud vector database. Scales automatically.</p>
+        <div class="tag"><p>Cloud, Managed</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 28pt 40pt 0 40pt;
+  }
+  .title-area h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .separator {
+    position: absolute;
+    top: 68pt; left: 40pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .pipeline {
+    position: absolute;
+    top: 100pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .step-box {
+    width: 112pt;
+    height: 60pt;
+    padding: 8pt;
+    border-radius: 6pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .step-box p {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+  }
+  .step-1 { background-color: #1B75BC; }
+  .step-2 { background-color: #114060; }
+  .step-3 { background-color: #33B6FF; }
+  .step-4 { background-color: #114060; }
+  .step-5 { background-color: #1B75BC; }
+  .arrow {
+    width: 20pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .arrow p {
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    color: #F48200;
+    font-weight: bold;
+    text-align: center;
+  }
+  .desc-row {
+    position: absolute;
+    top: 190pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    gap: 14pt;
+  }
+  .desc-box {
+    width: 124pt;
+    padding: 14pt;
+    border-radius: 6pt;
+    background-color: #f7f7f7;
+  }
+  .desc-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6pt;
+  }
+  .desc-box p {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #114060;
+    line-height: 1.4;
+  }
+  .summary-box {
+    position: absolute;
+    bottom: 30pt; left: 40pt;
+    width: 640pt;
+    padding: 14pt 20pt;
+    border-radius: 6pt;
+    background-color: #114060;
+  }
+  .summary-box p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #33B6FF;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>The RAG Pipeline</h1>
+  </div>
+  <div class="separator"></div>
+  <div class="pipeline">
+    <div class="step-box step-1"><p>User Question</p></div>
+    <div class="arrow"><p>&rarr;</p></div>
+    <div class="step-box step-2"><p>Retriever</p></div>
+    <div class="arrow"><p>&rarr;</p></div>
+    <div class="step-box step-3"><p>Relevant Documents</p></div>
+    <div class="arrow"><p>&rarr;</p></div>
+    <div class="step-box step-4"><p>LLM + Context</p></div>
+    <div class="arrow"><p>&rarr;</p></div>
+    <div class="step-box step-5"><p>Grounded Answer</p></div>
+  </div>
+  <div class="desc-row">
+    <div class="desc-box">
+      <h3>Step 1</h3>
+      <p>User asks a natural language question</p>
+    </div>
+    <div class="desc-box">
+      <h3>Step 2</h3>
+      <p>Retriever searches knowledge base for relevant docs</p>
+    </div>
+    <div class="desc-box">
+      <h3>Step 3</h3>
+      <p>Top matching documents are returned</p>
+    </div>
+    <div class="desc-box">
+      <h3>Step 4</h3>
+      <p>LLM receives question plus retrieved context</p>
+    </div>
+    <div class="desc-box">
+      <h3>Step 5</h3>
+      <p>Answer is grounded in actual source documents</p>
+    </div>
+  </div>
+  <div class="summary-box">
+    <p>The retriever bridges the gap between the user's question and the LLM's knowledge</p>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

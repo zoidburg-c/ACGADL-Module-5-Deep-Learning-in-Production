@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 28pt 40pt 0 40pt;
+  }
+  .title-area h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .separator {
+    position: absolute;
+    top: 68pt; left: 40pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .pipeline {
+    position: absolute;
+    top: 110pt; left: 30pt;
+    width: 660pt;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6pt 4pt;
+  }
+  .step-group {
+    display: flex;
+    align-items: center;
+  }
+  .step {
+    width: 130pt;
+    height: 50pt;
+    border-radius: 6pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1B75BC;
+  }
+  .step p {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .step.alt { background-color: #33B6FF; }
+  .step.accent { background-color: #F48200; }
+  .step.dark { background-color: #114060; }
+  .arrow-right p {
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    color: #1B75BC;
+    font-weight: bold;
+    padding: 0 2pt;
+  }
+  .row2 {
+    position: absolute;
+    top: 200pt; left: 30pt;
+    width: 660pt;
+    display: flex;
+    justify-content: center;
+    gap: 4pt;
+    align-items: center;
+  }
+  .note {
+    position: absolute;
+    top: 290pt; left: 40pt;
+    width: 640pt;
+    border-radius: 6pt;
+    padding: 14pt 20pt;
+    background-color: #f7f7f7;
+  }
+  .note p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #114060;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .down-arrow {
+    position: absolute;
+    top: 170pt;
+    left: 350pt;
+  }
+  .down-arrow p {
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    color: #F48200;
+    font-weight: bold;
+    text-align: center;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>The ML Production Pipeline</h1>
+  </div>
+  <div class="separator"></div>
+  <div class="pipeline">
+    <div class="step-group">
+      <div class="step"><p>Data Collection</p></div>
+      <div class="arrow-right"><p>&rarr;</p></div>
+    </div>
+    <div class="step-group">
+      <div class="step alt"><p>Preprocessing</p></div>
+      <div class="arrow-right"><p>&rarr;</p></div>
+    </div>
+    <div class="step-group">
+      <div class="step accent"><p>Training</p></div>
+      <div class="arrow-right"><p>&rarr;</p></div>
+    </div>
+    <div class="step-group">
+      <div class="step dark"><p>Evaluation</p></div>
+    </div>
+  </div>
+  <div class="down-arrow"><p>&darr;</p></div>
+  <div class="row2">
+    <div class="step-group">
+      <div class="step dark"><p>Packaging</p></div>
+      <div class="arrow-right"><p>&rarr;</p></div>
+    </div>
+    <div class="step-group">
+      <div class="step accent"><p>Deployment</p></div>
+      <div class="arrow-right"><p>&rarr;</p></div>
+    </div>
+    <div class="step-group">
+      <div class="step alt"><p>Monitoring</p></div>
+      <div class="arrow-right"><p>&rarr;</p></div>
+    </div>
+    <div class="step-group">
+      <div class="step"><p>Retraining</p></div>
+    </div>
+  </div>
+  <div class="note">
+    <p>A continuous cycle: monitoring feeds back into data collection and retraining</p>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

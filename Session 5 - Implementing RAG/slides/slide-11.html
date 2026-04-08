@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  .title-area {
+    padding: 28pt 40pt 0 40pt;
+  }
+  .title-area h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .separator {
+    position: absolute;
+    top: 68pt; left: 40pt;
+    width: 80pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .content-area {
+    position: absolute;
+    top: 85pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    gap: 20pt;
+  }
+  .left-col {
+    width: 310pt;
+  }
+  .what-box {
+    padding: 16pt 20pt;
+    border-radius: 6pt;
+    background-color: #1B75BC;
+    margin-bottom: 16pt;
+  }
+  .what-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6pt;
+  }
+  .what-box p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #FFFFFF;
+    line-height: 1.5;
+  }
+  .integration-box {
+    padding: 16pt 20pt;
+    border-radius: 6pt;
+    background-color: #114060;
+  }
+  .integration-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #F48200;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6pt;
+  }
+  .integration-box p {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #FFFFFF;
+    line-height: 1.5;
+  }
+  .right-col {
+    width: 310pt;
+  }
+  .models-box {
+    padding: 16pt 20pt;
+    border-radius: 6pt;
+    background-color: #f7f7f7;
+    margin-bottom: 16pt;
+  }
+  .models-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: #1B75BC;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 10pt;
+  }
+  .model-item {
+    padding: 8pt 12pt;
+    border-radius: 4pt;
+    background-color: #1B75BC;
+    margin-bottom: 8pt;
+  }
+  .model-item p {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #FFFFFF;
+    line-height: 1.3;
+  }
+  .model-item-last {
+    padding: 8pt 12pt;
+    border-radius: 4pt;
+    background-color: #1B75BC;
+  }
+  .model-item-last p {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #FFFFFF;
+    line-height: 1.3;
+  }
+  .embed-box {
+    padding: 16pt 20pt;
+    border-radius: 6pt;
+    background-color: #F48200;
+  }
+  .embed-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 4pt;
+  }
+  .embed-box p {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #FFFFFF;
+    line-height: 1.4;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="title-area">
+    <h1>AWS Bedrock for RAG</h1>
+  </div>
+  <div class="separator"></div>
+  <div class="content-area">
+    <div class="left-col">
+      <div class="what-box">
+        <h3>What is Bedrock?</h3>
+        <p>AWS managed service providing access to foundation models from multiple providers through a single API.</p>
+      </div>
+      <div class="integration-box">
+        <h3>LangChain Integration</h3>
+        <p>Use the langchain-aws package to seamlessly connect Bedrock models with LangChain's RAG components.</p>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="models-box">
+        <h3>Available Models</h3>
+        <div class="model-item">
+          <p>Claude (Anthropic) - Advanced reasoning</p>
+        </div>
+        <div class="model-item">
+          <p>Titan (Amazon) - General purpose</p>
+        </div>
+        <div class="model-item-last">
+          <p>Llama (Meta) - Open source</p>
+        </div>
+      </div>
+      <div class="embed-box">
+        <h3>Bedrock Embeddings</h3>
+        <p>Amazon Titan Embeddings for creating high-quality vector representations.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>

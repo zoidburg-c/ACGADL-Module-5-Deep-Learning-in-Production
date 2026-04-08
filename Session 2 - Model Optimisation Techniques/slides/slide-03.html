@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1B75BC;
+    font-weight: bold;
+    margin: 30pt 40pt 0 40pt;
+    line-height: 1.3;
+  }
+  .accent-line {
+    position: absolute;
+    top: 62pt; left: 40pt;
+    width: 60pt; height: 3pt;
+    background-color: #F48200;
+  }
+  .scale-container {
+    position: absolute;
+    top: 95pt; left: 40pt;
+    width: 640pt;
+    display: flex;
+    align-items: flex-start;
+    gap: 20pt;
+  }
+  .side-box {
+    width: 260pt;
+    height: 200pt;
+    border-radius: 8pt;
+    padding: 20pt;
+  }
+  .side-left {
+    background-color: #114060;
+  }
+  .side-right {
+    background-color: #1B75BC;
+  }
+  .side-box h2 {
+    font-size: 18pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 14pt;
+    line-height: 1.3;
+  }
+  .side-left ul, .side-right ul {
+    padding-left: 20pt;
+  }
+  .side-left ul li, .side-right ul li {
+    font-size: 13pt;
+    color: #CCCCCC;
+    line-height: 1.8;
+  }
+  .side-right ul li {
+    color: #E0F0EF;
+  }
+  .vs-circle {
+    width: 50pt;
+    height: 50pt;
+    background-color: #F48200;
+    border-radius: 25pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75pt;
+  }
+  .vs-circle p {
+    font-size: 16pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+  }
+  .goal-box {
+    position: absolute;
+    top: 318pt; left: 40pt;
+    width: 640pt;
+    height: 46pt;
+    background-color: #FFF3E0;
+    border-radius: 6pt;
+    border-left: 4pt solid #F48200;
+    display: flex;
+    align-items: center;
+    padding: 0 20pt;
+  }
+  .goal-box p {
+    font-size: 12pt;
+    color: #114060;
+    line-height: 1.4;
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 720pt; height: 4pt;
+    background-color: #1B75BC;
+  }
+</style>
+</head>
+<body>
+  <div class="header-bar"></div>
+  <h1>The Accuracy vs Efficiency Trade-Off</h1>
+  <div class="accent-line"></div>
+  <div class="scale-container">
+    <div class="side-box side-left">
+      <h2>Accuracy</h2>
+      <ul>
+        <li>Bigger models</li>
+        <li>Slower inference</li>
+        <li>More expensive</li>
+        <li>Higher precision</li>
+      </ul>
+    </div>
+    <div class="vs-circle"><p>vs</p></div>
+    <div class="side-box side-right">
+      <h2>Efficiency</h2>
+      <ul>
+        <li>Smaller models</li>
+        <li>Faster inference</li>
+        <li>Cheaper to run</li>
+        <li>Lower footprint</li>
+      </ul>
+    </div>
+  </div>
+  <div class="goal-box">
+    <p><strong>The goal:</strong> Minimise accuracy loss while maximising efficiency gains</p>
+  </div>
+  <div class="footer-bar"></div>
+</body>
+</html>
