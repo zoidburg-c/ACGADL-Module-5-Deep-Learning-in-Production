@@ -75,7 +75,7 @@ def read_root():
 async def predict(file: UploadFile = File(...)):
     """
     Accept an uploaded image and return the top-5 predictions.
-    
+
     This is the main prediction endpoint. It follows the same
     load -> preprocess -> infer -> postprocess pattern we built
     in Exercise 2.
@@ -83,18 +83,18 @@ async def predict(file: UploadFile = File(...)):
     # Read the uploaded image
     image_bytes = await file.read()
     img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-    
+
     # Preprocess
     input_tensor = preprocess(img).unsqueeze(0)
-    
+
     # Run inference
     with torch.no_grad():
         output = model(input_tensor)
-    
+
     # Postprocess
     probabilities = torch.nn.functional.softmax(output[0], dim=0)
     top_probs, top_indices = torch.topk(probabilities, 5)
-    
+
     # Format the results as a JSON-friendly response
     predictions = [
         {
@@ -104,7 +104,7 @@ async def predict(file: UploadFile = File(...)):
         }
         for i, (prob, idx) in enumerate(zip(top_probs, top_indices))
     ]
-    
+
     return {
         "filename": file.filename,
         "predictions": predictions
